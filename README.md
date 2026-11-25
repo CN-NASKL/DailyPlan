@@ -10,11 +10,13 @@
 [![Stars](https://img.shields.io/github/stars/CN-NASKL/DailyPlan?style=flat-square)](https://github.com/CN-NASKL/DailyPlan/stargazers)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=flat-square)]()
 
+**🌐 [中文](#中文) · [English](#english)**
+
 </div>
 
 ---
 
-## 🇨🇳 中文
+## <a id="中文"></a>🇨🇳 中文
 
 ### 这是什么
 
@@ -111,7 +113,7 @@ daily-plan-wpf/
 
 ---
 
-## 🌐 English
+## <a id="english"></a>🌐 English
 
 ### What is this
 
