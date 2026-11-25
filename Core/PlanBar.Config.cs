@@ -22,25 +22,9 @@ partial class PlanBar
     internal const int Workdays = DMon | DTue | DWed | DThu | DFri;              // 31  工作日
     internal const int Weekend  = DSat | DSun;                                   // 96  周末
 
-    // 默认作息（首次运行 / 无存档时使用）
+    // 默认作息（首次运行 / 无存档时使用；默认空计划，由用户自行添加）
     static readonly (string start, string name)[] DefaultItems =
-    {
-        ("06:30", "起床 + 洗漱 + 早餐"),
-        ("07:00", "写《异星蓝图：从零开始的救世工厂》6000 字"),
-        ("09:30", "行测卷（除政治理论）"),
-        ("11:30", "午餐"),
-        ("12:30", "午休"),
-        ("13:00", "申论卷（除大作文）"),
-        ("14:30", "俯卧撑 50 个 + 深蹲 100 个"),
-        ("15:00", "写《烬穹之主》3000 字 × 2 章"),
-        ("17:30", "写《第四天灾》3000 字"),
-        ("18:30", "晚餐"),
-        ("19:00", "EVE-CorpOS 模块开发"),
-        ("20:30", "Blender 建模"),
-        ("22:00", "AI 漫剧剧情一集"),
-        ("23:00", "洗漱"),
-        ("23:30", "睡觉"),
-    };
+        Array.Empty<(string start, string name)>();
 
     // 运行时作息分组（从 schedule_data.txt 加载，可被编辑器修改）
     internal static List<ScheduleGroup> ScheduleGroups = new()

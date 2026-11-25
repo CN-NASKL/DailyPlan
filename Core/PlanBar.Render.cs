@@ -135,7 +135,7 @@ partial class PlanBar
         int m = now.Hour * 60 + now.Minute;
         var items = ItemsFor(DayMaskOf(now)); // 按当天星期取对应作息
 
-        string name = "睡眠时间（晚安）";
+        string name = items.Count == 0 ? "" : "睡眠时间（晚安）";
         float progress = 0f;
 
         for (int i = 0; i < items.Count; i++)
