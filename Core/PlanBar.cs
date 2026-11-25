@@ -13,7 +13,6 @@ partial class PlanBar : Form
 {
     readonly System.Windows.Forms.Timer _refreshTimer;
     readonly System.Windows.Forms.Timer _stickyTimer;
-    readonly System.Windows.Forms.Timer _musicTimer;
 
     // 当前配色
     Color _bgSolid = BgSolid;
@@ -48,14 +47,12 @@ partial class PlanBar : Form
     int _moveStartBarX;
     int _moveDpi = 96;
 
-    // 音乐服务（SMTC + 歌词）
+    // 音乐服务（SMTC）
     readonly MusicService _music = new();
-    readonly LyricsService _lyrics = new();
 
     // 音乐按钮命中矩形（像素，渲染时更新）
     RectangleF _btnPrev, _btnPlay, _btnNext;
     bool _musicVisible;
-    int _lastLyricIndex = -1;
 
     // 文字命中矩形（像素，渲染时更新，用于光标判断）
     RectangleF _taskTextRect, _songTextRect;
@@ -77,11 +74,7 @@ partial class PlanBar : Form
 
         LoadSettings();
 
-        _musicTimer = new System.Windows.Forms.Timer { Interval = 250 };
-        _musicTimer.Tick += (_, _) => MusicFrameTick();
-
         _music.Changed += OnMusicChanged;
-        _lyrics.Changed += OnLyricsChanged;
 
         Load += (_, _) =>
         {
@@ -92,7 +85,6 @@ partial class PlanBar : Form
             RefreshText();
             _stickyTimer.Start();
             _refreshTimer.Start();
-            _musicTimer.Start();
             _ = InitMusicAsync();
         };
 

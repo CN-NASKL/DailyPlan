@@ -191,7 +191,7 @@ partial class PlanBar
             (int)(a.B + (b.B - a.B) * t));
     }
 
-    // ===== 音乐区：控制按钮 + 歌词/歌名 =====
+    // ===== 音乐区：控制按钮 + 歌名 =====
     enum MusicButton { Prev, Play, Pause, Next }
 
     void DrawMusicArea(Graphics g, int w, int h, MediaInfo music, float fontPt)

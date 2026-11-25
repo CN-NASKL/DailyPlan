@@ -4,11 +4,15 @@
 
 > DailyPlan is a Windows 11 taskbar widget that shows your daily schedule inline, with an optional music controller / now-playing display via the system SMTC (System Media Transport Controls).
 
+## 📥 下载
+
+在 [Releases](https://github.com/CN-NASKL/DailyPlan/releases) 页面下载 `DailyPlan.exe`（自包含单文件，无需安装 .NET），双击即可运行。
+
 ## ✨ 功能特性
 
 - **原生嵌入任务栏**：通过 `SetParent` 成为 `Shell_TrayWnd` 子窗口，使用 `UpdateLayeredWindow` + 逐像素 alpha 突破任务栏 Mica / DirectComposition 层，与系统图标共存。
 - **当前时段安排展示**：自动根据当前时间定位并高亮显示正在进行的任务，左侧竖条颜色随时间进度由青绿 → 黄 → 红。
-- **音乐控制 + 实时歌词**（可选）：通过系统 SMTC 自动读取当前播放器（QQ音乐 / 网易云 / Spotify / 浏览器等）的歌名与歌手，提供上一首 / 播放暂停 / 下一首按钮；支持 LRCLIB 在线匹配同步歌词（本地缓存）。
+- **音乐控制**（可选）：通过系统 SMTC 自动读取当前播放器（QQ音乐 / 网易云 / Spotify / 浏览器等）的歌名与歌手，提供上一首 / 播放暂停 / 下一首按钮。
 - **自由拖拽与避让**：栏体可在任务栏内任意拖动、调宽，并通过 UIA 探测自动避让「开始 / 搜索 / 任务视图 / 小组件 / 托盘」等系统按钮。
 - **作息编辑器**：支持「每天一致 / 工作日·周末 / 按星期独立」三种日期模式，时间栏可点击弹出滚轮 + 输入框双模式选择。
 - **现代化深色设置面板**：透明度、字体大小、底色调色盘（含自定义取色器）、开机自启动开关。
@@ -31,14 +35,13 @@ daily-plan-wpf/
 │   ├── PlanBar.Config.cs      #   配置 / 作息分组数据模型
 │   ├── PlanBar.Interaction.cs #   拖动 / 调宽 / 设置持久化
 │   ├── PlanBar.Menu.cs        #   设置面板入口
-│   ├── PlanBar.Music.cs       #   音乐生命周期 / 歌词刷新
+│   ├── PlanBar.Music.cs       #   音乐生命周期
 │   ├── PlanBar.Native.cs      #   Win32 P/Invoke
 │   ├── PlanBar.Render.cs      #   逐像素渲染 / 文字 / 音乐区
 │   ├── PlanBar.Startup.cs     #   开机自启动
 │   └── PlanBar.Taskbar.cs     #   任务栏嵌入 / UIA 避让
 ├── Services/                  # 服务层
-│   ├── MusicService.cs        #   SMTC 音乐服务
-│   └── LyricsService.cs       #   歌词匹配 / 解析 / 缓存
+│   └── MusicService.cs        #   SMTC 音乐服务
 ├── Controls/                  # 自定义控件
 │   ├── Slider.cs              #   现代化滑动条
 │   ├── ToggleSwitch.cs        #   开关按钮
@@ -81,7 +84,6 @@ dotnet publish -c Release -r win-x64 --self-contained true
 ## ⚠️ 说明
 
 - 仅支持 Windows（针对 Windows 11 任务栏布局优化）。
-- 音乐歌词匹配依赖 LRCLIB 在线服务，冷门 / 翻唱歌曲可能匹配不到（此时仅显示歌名 + 歌手，不影响控制按钮）。
 
 ## 📄 License
 
