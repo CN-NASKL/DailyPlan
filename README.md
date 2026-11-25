@@ -2,23 +2,21 @@
 
 # DailyPlan · 每日计划任务栏
 
-**原生嵌入 Windows 11 任务栏的每日计划展示栏 + 音乐控制**
+**原生嵌入 Windows 11 任务栏的每日计划展示栏 + 音乐控制**  
+*A native Windows 11 taskbar widget for daily plans & music control*
 
 [![License](https://img.shields.io/github/license/CN-NASKL/DailyPlan?style=flat-square&color=3A8EFF)](./LICENSE)
 [![Release](https://img.shields.io/github/v/release/CN-NASKL/DailyPlan?style=flat-square)](https://github.com/CN-NASKL/DailyPlan/releases)
 [![Stars](https://img.shields.io/github/stars/CN-NASKL/DailyPlan?style=flat-square)](https://github.com/CN-NASKL/DailyPlan/stargazers)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=flat-square)]()
 
-**🌐 [中文](#中文) · [English](#english)**
-
 </div>
 
 ---
 
-<details open>
-<summary><a id="中文"></a>🇨🇳 中文</summary>
+## 🇨🇳 中文
 
-## 这是什么
+### 这是什么
 
 DailyPlan 是一个**原生嵌入 Windows 11 任务栏**的小工具：它以一条深色胶囊长条常驻任务栏，按当前时间自动显示你正在进行的安排；当系统有音乐播放时，右侧会自动浮现歌曲信息和控制按钮。
 
@@ -26,7 +24,7 @@ DailyPlan 是一个**原生嵌入 Windows 11 任务栏**的小工具：它以一
 - ⏰ 自动定位当前时段任务，进度竖条颜色随时间变化
 - 🎵 音乐控制，读取系统正在播放的歌名/歌手
 
-## ✨ 功能特性
+### ✨ 功能特性
 
 - **原生嵌入任务栏**：通过 `SetParent` + `UpdateLayeredWindow` 逐像素 alpha，与开始菜单、系统图标共存，不被窗口覆盖。
 - **当前时段展示**：自动显示进行中的任务，左侧竖条颜色随剩余时间由青绿 → 黄 → 红。
@@ -35,7 +33,7 @@ DailyPlan 是一个**原生嵌入 Windows 11 任务栏**的小工具：它以一
 - **作息编辑器**：支持「每天一致 / 工作日·周末 / 按星期独立」，时间栏点击弹出滚轮选择。
 - **深色设置面板**：透明度、字体大小、底色调色盘（含自定义取色器）、开机自启动。
 
-## 📥 快速开始
+### 📥 快速开始
 
 1. 到 [Releases](https://github.com/CN-NASKL/DailyPlan/releases) 下载 `DailyPlan.exe`（自包含单文件，**无需安装 .NET**）。
 2. 双击运行，计划栏会出现在任务栏左侧。
@@ -43,7 +41,7 @@ DailyPlan 是一个**原生嵌入 Windows 11 任务栏**的小工具：它以一
 
 > 首次运行默认是**空计划**，需要你自己添加作息；添加后会自动保存到 exe 同目录。
 
-## 📖 使用指南
+### 📖 使用指南
 
 | 操作 | 效果 |
 |---|---|
@@ -54,7 +52,7 @@ DailyPlan 是一个**原生嵌入 Windows 11 任务栏**的小工具：它以一
 | 「开机启动」 | 开机自动运行 |
 | 播放音乐 | 右侧自动显示歌名 + 控制按钮 |
 
-## 🛠 从源码构建
+### 🛠 从源码构建
 
 需要 [.NET 9 SDK](https://dotnet.microsoft.com/download)（Windows）。
 
@@ -68,7 +66,7 @@ dotnet publish -c Release -r win-x64 --self-contained true
 
 **技术栈**：C# / WinForms · Win32 P/Invoke · UIA（任务栏按钮探测）· WinRT SMTC（媒体控制）
 
-## 📁 项目结构
+### 📁 项目结构
 
 ```
 daily-plan-wpf/
@@ -99,21 +97,23 @@ daily-plan-wpf/
     └── ScheduleEditorForm.cs  #   作息编辑器
 ```
 
-## ⚠️ 说明
+### ⚠️ 说明
 
 - 仅支持 **Windows**（针对 Windows 11 任务栏布局优化）。
 - 未签名开源程序，下载运行时 SmartScreen 可能提示拦截，点「更多信息 → 仍要运行」即可。
 
-## 📄 License
+### 📄 License
 
 [MIT](./LICENSE)
 
-</details>
+<br>
+<br>
 
-<details>
-<summary><a id="english"></a>🌐 English</summary>
+---
 
-## What is this
+## 🌐 English
+
+### What is this
 
 DailyPlan is a widget **natively embedded in the Windows 11 taskbar**: it lives on the taskbar as a dark capsule bar, showing the task you're currently doing based on the time. When music is playing, the song info and control buttons appear on the right automatically.
 
@@ -121,7 +121,7 @@ DailyPlan is a widget **natively embedded in the Windows 11 taskbar**: it lives 
 - ⏰ Auto-highlights the current task, with a progress bar that changes color over time
 - 🎵 Music control — reads the song/artist currently playing on your system
 
-## ✨ Features
+### ✨ Features
 
 - **Native taskbar embedding**: uses `SetParent` + `UpdateLayeredWindow` per-pixel alpha, coexisting with the Start menu and system icons.
 - **Current-task display**: shows the active task, with a left color bar that shifts green → yellow → red as time runs out.
@@ -130,7 +130,7 @@ DailyPlan is a widget **natively embedded in the Windows 11 taskbar**: it lives 
 - **Schedule editor**: supports "same every day / weekdays & weekends / per-weekday", with a wheel picker for time.
 - **Dark settings panel**: opacity, font size, background palette (with custom color picker), auto-start.
 
-## 📥 Quick start
+### 📥 Quick start
 
 1. Download `DailyPlan.exe` from [Releases](https://github.com/CN-NASKL/DailyPlan/releases) (self-contained, **no .NET install needed**).
 2. Double-click to run — the bar appears on the left of the taskbar.
@@ -138,7 +138,7 @@ DailyPlan is a widget **natively embedded in the Windows 11 taskbar**: it lives 
 
 > First run starts with an **empty schedule**; add your own items, which are saved automatically next to the exe.
 
-## 📖 Usage
+### 📖 Usage
 
 | Action | Effect |
 |---|---|
@@ -149,7 +149,7 @@ DailyPlan is a widget **natively embedded in the Windows 11 taskbar**: it lives 
 | "Auto-start" | Run at login |
 | Play music | Song info + controls appear on the right |
 
-## 🛠 Build from source
+### 🛠 Build from source
 
 Requires [.NET 9 SDK](https://dotnet.microsoft.com/download) (Windows).
 
@@ -163,7 +163,7 @@ dotnet publish -c Release -r win-x64 --self-contained true
 
 **Tech stack**: C# / WinForms · Win32 P/Invoke · UIA (taskbar button detection) · WinRT SMTC (media control)
 
-## 📁 Project structure
+### 📁 Project structure
 
 ```
 daily-plan-wpf/
@@ -194,13 +194,11 @@ daily-plan-wpf/
     └── ScheduleEditorForm.cs  #   schedule editor
 ```
 
-## ⚠️ Notes
+### ⚠️ Notes
 
 - Windows only (optimized for Windows 11 taskbar layout).
 - This is an unsigned open-source app, so SmartScreen may warn on download — click "More info → Run anyway".
 
-## 📄 License
+### 📄 License
 
 [MIT](./LICENSE)
-
-</details>
