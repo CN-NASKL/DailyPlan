@@ -1,0 +1,23 @@
+# ===== 构建与发布产物 =====
+bin/
+obj/
+dist/
+publish/
+
+# ===== Visual Studio / IDE =====
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ===== 运行时生成的数据（本地配置/作息/歌词缓存） =====
+settings.txt
+schedule_data.txt
+schedule.txt
+lyrics_cache/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
