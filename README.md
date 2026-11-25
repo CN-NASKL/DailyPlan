@@ -9,12 +9,14 @@
 [![Stars](https://img.shields.io/github/stars/CN-NASKL/DailyPlan?style=flat-square)](https://github.com/CN-NASKL/DailyPlan/stargazers)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=flat-square)]()
 
+**🌐 [中文](#中文) · [English](#english)**
+
 </div>
 
 ---
 
 <details open>
-<summary>🇨🇳 中文</summary>
+<summary><a id="中文"></a>🇨🇳 中文</summary>
 
 ## 这是什么
 
@@ -109,7 +111,7 @@ daily-plan-wpf/
 </details>
 
 <details>
-<summary>🌐 English</summary>
+<summary><a id="english"></a>🌐 English</summary>
 
 ## What is this
 
